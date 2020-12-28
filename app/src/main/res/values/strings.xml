@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="movies">Movies</string>
+    <string name="tv_shows">Tv Shows</string>
+    <string name="poster">poster</string>
+    <string name="description">Description</string>
+    <string name="app_logo">App Logo</string>
+    <string name="title">Title</string>
+    <string name="release_date">Release Date</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="catalogue">Catalogue</string>
+    <string name="favorite">Favorite</string>
+    <string name="retry">Retry</string>
+</resources>

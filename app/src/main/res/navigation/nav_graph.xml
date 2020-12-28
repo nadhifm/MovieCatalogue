@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/catalogueFragment">
+
+    <fragment
+        android:id="@+id/catalogueFragment"
+        android:name="com.nadhif.moviecatalogue.ui.catalogue.CatalogueFragment"
+        android:label="CatalogueFragment" >
+        <action
+            android:id="@+id/action_catalogueFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_catalogueFragment_to_tvShowDetailFragment"
+            app:destination="@id/tvShowDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.nadhif.moviecatalogue.ui.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_tvShowDetailFragment"
+            app:destination="@id/tvShowDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.nadhif.moviecatalogue.ui.detail.movie.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="selectedMovie"
+            app:argType="com.nadhif.moviecatalogue.data.source.remote.response.Movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvShowDetailFragment"
+        android:name="com.nadhif.moviecatalogue.ui.detail.tvshow.TvShowDetailFragment"
+        android:label="fragment_tv_show_detail"
+        tools:layout="@layout/fragment_tv_show_detail" >
+        <argument
+            android:name="selectedTvShow"
+            app:argType="com.nadhif.moviecatalogue.data.source.remote.response.TvShow" />
+    </fragment>
+</navigation>
